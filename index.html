@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/targets_nosign.mind; maxTrack: 3" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/targets_sign.mind; maxTrack: 3" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <img id="arrow" src="./content/up.png" />
       </a-assets>
@@ -21,7 +21,7 @@
         <a-image src="#arrow" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="red"></a-image>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 2">
-        <a-image src="#arrow" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="blue"></a-image>
+        <a-image src="#arrow" position="0 0 0" height="0.552" width="1" rotation="90 0 0" color="orange"></a-image>
       </a-entity>
 
     </a-scene>
