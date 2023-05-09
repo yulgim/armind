@@ -3,11 +3,7 @@
 //각 화살표의 id를 이용해 attribute 가능한지 확인하기
 
 // 사용자가 입력한 열 값을 저장하는 함수
-function saveNumber()  {
-  var num = document.getElementById('input_num').value; // id='input_num'인 입력창에 입력된 열 값을 불러와 저장, 열은 1열부터 시작
-  var user_num = Number(num);
-  user_num -= 1; // 화살표 이미지의 id는 0부터 시작하기에 1을 빼준다.
-}
+
 
 
 //아래 코드는 entity의 id를 이용해 entity를 파악하고(getElementById이용), entity 뒤에 '.'을 붙여 entity.component.property 값 까지 얻을 수 있음--> 코드 결과 : html에 scene에 설정된 maxtrack값 가져옴
