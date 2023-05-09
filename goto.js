@@ -6,7 +6,7 @@
 function saveNumber()  {
   const num = document.getElementById('input_num').value; // id='input_num'인 입력창에 입력된 열 값을 불러와 저장, 열은 1열부터 시작
   var user_num = Number(num);
-  user_num -= 1; // 이미지 타겟의 인덱스는 0부터 시작하기에 1을 빼준다.
+  user_num -= 1; // 화살표 이미지의 id는 0부터 시작하기에 1을 빼준다.
 }
 
 
