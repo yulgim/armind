@@ -5,15 +5,14 @@
     <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
-        <script
+        <script>
 	    var num = '0';
 	    function saveNumber()  {
   		num = document.getElementById('input_num').value; // id='input_num'인 입력창에 입력된 열 값을 불러와 저장, 열은 1열부터 시작
   		var user_num = Number(num);
   		user_num -= 1; // 화살표 이미지의 id는 0부터 시작하기에 1을 빼준다.
 	    }
-
-    </script>
+    	</script>
 	  <input type="text" id='input_num'>
 	  <div><input type="button" value="확인" id="numbtn" onclick='saveNumber()'></div>
 
