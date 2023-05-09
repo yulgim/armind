@@ -4,7 +4,7 @@
 
 // 사용자가 입력한 열 값을 저장하는 함수
 function saveNumber()  {
-  const num = document.getElementById('input_num').value; // id='input_num'인 입력창에 입력된 열 값을 불러와 저장, 열은 1열부터 시작
+  var num = document.getElementById('input_num').value; // id='input_num'인 입력창에 입력된 열 값을 불러와 저장, 열은 1열부터 시작
   var user_num = Number(num);
   user_num -= 1; // 화살표 이미지의 id는 0부터 시작하기에 1을 빼준다.
 }
@@ -38,7 +38,7 @@ for (let i = user_num+1; i < imgmax; i++){
 
 // 각 이미지 타겟 위에 나타날 화살표 이미지 결정
 for (let i = 0; i < imgmax; i++){
-  const imageEntity = document.getEntityById(arwid[i]);
+  var imageEntity = document.getEntityById(arwid[i]);
   imageEntity.setAttribute('src', arwimg[i]);
 }
 
