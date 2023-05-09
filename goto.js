@@ -3,11 +3,10 @@
 //각 화살표의 id를 이용해 attribute 가능한지 확인하기
 
 
-/* 아래 코드는 entity의 id를 이용해 entity를 파악하고(entitymanger이용), entity 뒤에 '.'을 붙여 entity.component.property 값 까지 얻을 수 있음--> 코드 결과 : scene에 설정된 maxtrack값 가져옴
+//아래 코드는 entity의 id를 이용해 entity를 파악하고(entitymanger이용), entity 뒤에 '.'을 붙여 entity.component.property 값 까지 얻을 수 있음--> 코드 결과 : html에 scene에 설정된 maxtrack값 가져옴
 const sceneId = 'scene';
 const entity = entityManager.getEntityById(sceneId);
-const maxTrack = entity.components.mindar-image.maxTrack; */
-var imgmax = 5; // html에서 maxtrack 값에 따라 바꿔줘야함.-->위의 것 시도 가능
+var imgmax = entity.components.mindar-image.maxTrack; // html에서 설정한 maxtrack값을 가져옴
 
 // 화살표 이미지의 id 저장
 var arwid = [];//화살표 이미지의 id
