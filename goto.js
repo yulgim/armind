@@ -6,7 +6,7 @@
 
 
 
-//아래 코드는 entity의 id를 이용해 entity를 파악하고(getElementById이용), entity 뒤에 '.'을 붙여 entity.component.property 값 까지 얻을 수 있음--> 코드 결과 : html에 scene에 설정된 maxtrack값 가져옴
+//아래 코드는 entity의 id를 이용해 entity를 파악하고(querySelector이용), getAttribute('component이름', 'property 이름')을 이용--> 코드 결과 : html에 scene에 설정된 maxtrack값 가져옴
 const sceneId = '#scene';
 const entity = document.querySelector(sceneId);
 var imgmax = entity.getAttribute('mindar-image','maxTrack'); // html에서 설정한 maxtrack값을 가져옴
