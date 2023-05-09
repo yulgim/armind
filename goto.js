@@ -11,13 +11,13 @@ function saveNumber()  {
 
 
 //아래 코드는 entity의 id를 이용해 entity를 파악하고(getElementById이용), entity 뒤에 '.'을 붙여 entity.component.property 값 까지 얻을 수 있음--> 코드 결과 : html에 scene에 설정된 maxtrack값 가져옴
-const sceneId = 'scene';
-const entity = document.getElementById(sceneId);
-var imgmax = entity.components.mindar-image.maxTrack; // html에서 설정한 maxtrack값을 가져옴
+const sceneId = '#scene';
+const entity = document.querySelector(sceneId);
+var imgmax = entity.getAttribute('mindar-image','maxTrack'); // html에서 설정한 maxtrack값을 가져옴
 
 // 화살표 이미지의 id 저장
 var arwid = [];//ar 오브젝트의 id
-const arw = 'arrow';
+const arw = '#arrow';
 for(let i = 0; i < imgmax; i++){
   arwid.push(arw + i);
 }
@@ -38,7 +38,7 @@ for (let i = user_num+1; i < imgmax; i++){
 
 // 각 이미지 타겟 위에 나타날 화살표 이미지 결정
 for (let i = 0; i < imgmax; i++){
-  var imageEntity = document.getElementById(arwid[i]);
+  var imageEntity = document.querySelector(arwid[i]);
   imageEntity.setAttribute('src', arwimg[i]);
 }
 
