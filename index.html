@@ -9,25 +9,28 @@
   <body>
     <a-scene id="scene" mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/char.mind; maxTrack: 5" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <img id="arrow" src="./content/up.png" />
+        <img id="up" src="./content/up.png" />
+        <img id="down" src="./content/down.png" />
+        <img id="left" src="./content/left.png" />
+        <img id="right" src="./content/right.png" />
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-image id="arrow0" src="#arrow" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+        <a-image id="arrow0" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-image id="arrow1" src="#arrow" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="red"></a-image>
+        <a-image id="arrow1" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="red"></a-image>
       </a-entity>
        <a-entity mindar-image-target="targetIndex: 2">
-        <a-image id="arrow2" src="#arrow" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="blue"></a-image>
+        <a-image id="arrow2" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="blue"></a-image>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 3">
-        <a-image id="arrow3" src="#arrow" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="orange"></a-image>
+        <a-image id="arrow3" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="orange"></a-image>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 4">
-        <a-image id="arrow4" src="#arrow" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="white"></a-image>
+        <a-image id="arrow4" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="white"></a-image>
       </a-entity>
       
     </a-scene>
