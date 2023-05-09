@@ -6,38 +6,20 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
     
-    //
-    document.addEventListener("DOMContentLoaded", function() {
-	    const sceneEl = document.querySelector('a-scene');
-	    const arSystem = sceneEl.systems["mindar-image-system"];
-
-	    const startButton = document.querySelector("#startbtn");
-    
-    
-	    startButton.addEventListener('click', () => {
-	     console.log("start");
-	      arSystem.start(); // start AR 
+	  //addEventListener()는 특정 이벤트가 발생할 때마다 특정 함수를 실행함
+    <script>
+	    document.addEventListener("DOMContentLoaded", function() {
+		    const sceneEl = document.querySelector('a-scene');
+		    const arSystem = sceneEl.systems["mindar-image-system"];
+		    const startButton = document.querySelector("#startbtn");
+		    
+		    //startButton 클릭 시 ar 시작
+		    startButton.addEventListener('click', () => {
+			    console.log("start");
+			    arSystem.start(); // start AR
+		    });
 	    });
-
-    	// arReady 이벤트는 ar 기능이 준비완료되면 발동함
-	    sceneEl.addEventListener("arReady", (event) => {
-    	  // console.log("AR is ready")
-    	});
-    	// arError 이벤트는 ar 기능에 오류가 생기면 발동함
-    	sceneEl.addEventListener("arError", (event) => {
-    	  // console.log("AR failed to start")
-    	});
-    	// targetfound 이벤트는 이미지 타겟을 인식할 때 발동함
-    	exampleTarget.addEventListener("targetFound", event => {
-    	  console.log("target found");
-    	});
-    	// targetlost 이벤트는 이미지 타겟을 놓쳤을 때 발동함 
-    	exampleTarget.addEventListener("targetLost", event => {
-    	  console.log("target lost");
-    	});
-
-    });
-    </script>
+  </script>
   </head>
 
   <body>
