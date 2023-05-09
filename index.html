@@ -5,14 +5,53 @@
     <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
+    
+    //
+    document.addEventListener("DOMContentLoaded", function() {
+	    const sceneEl = document.querySelector('a-scene');
+	    const arSystem = sceneEl.systems["mindar-image-system"];
+
+	    const startButton = document.querySelector("#startbtn");
+    
+    
+	    startButton.addEventListener('click', () => {
+	     console.log("start");
+	      arSystem.start(); // start AR 
+	    });
+
+    	// arReady 이벤트는 ar 기능이 준비완료되면 발동함
+	    sceneEl.addEventListener("arReady", (event) => {
+    	  // console.log("AR is ready")
+    	});
+    	// arError 이벤트는 ar 기능에 오류가 생기면 발동함
+    	sceneEl.addEventListener("arError", (event) => {
+    	  // console.log("AR failed to start")
+    	});
+    	// targetfound 이벤트는 이미지 타겟을 인식할 때 발동함
+    	exampleTarget.addEventListener("targetFound", event => {
+    	  console.log("target found");
+    	});
+    	// targetlost 이벤트는 이미지 타겟을 놓쳤을 때 발동함 
+    	exampleTarget.addEventListener("targetLost", event => {
+    	  console.log("target lost");
+    	});
+
+    });
+    </script>
   </head>
+
   <body>
-    <a-scene id="scene" mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/char.mind; maxTrack: 5" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <input id='input_num'>
+    <div><button type = "button" id="numbtn" onclick='saveNumber()'/>확인</button></div>
+    <div></div>
+    <div><button type="button" id="startbtn">시작</button></div>
+   
+    
+    <a-scene id="scene" mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/char.mind; maxTrack: 5; autoStart: false;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <img id="up" src="./content/up.png" />
         <img id="down" src="./content/down.png" />
-        <img id="left" src="./content/left.png" />
-        <img id="right" src="./content/right.png" />
+        <img id="arrive" src="./content/arrive.png" />
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -21,16 +60,16 @@
         <a-image id="arrow0" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-image id="arrow1" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="red"></a-image>
+        <a-image id="arrow1" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
       </a-entity>
        <a-entity mindar-image-target="targetIndex: 2">
-        <a-image id="arrow2" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="blue"></a-image>
+        <a-image id="arrow2" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 3">
-        <a-image id="arrow3" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="orange"></a-image>
+        <a-image id="arrow3" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 4">
-        <a-image id="arrow4" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="white"></a-image>
+        <a-image id="arrow4" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
       </a-entity>
       
     </a-scene>
