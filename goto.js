@@ -1,9 +1,4 @@
-//화살표마다 rotation변수 선언, 상황에 맞게 값 저장
-//각 화살표의 rotation = 위에서 만든 rotation 변수 적용
-//각 화살표의 id를 이용해 attribute 가능한지 확인하기
-
-// 사용자가 입력한 열 값을 저장하는 함수
-
+import {user_num} from './index.html'
 
 
 //아래 코드는 entity의 id를 이용해 entity를 파악하고(querySelector이용), getAttribute('component이름', 'property 이름')을 이용--> 코드 결과 : html에 scene에 설정된 maxtrack값 가져옴
