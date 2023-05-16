@@ -1,4 +1,4 @@
-import {user_num} from './index.html'
+var num = document.getElementById('input_num');
 
 
 //아래 코드는 entity의 id를 이용해 entity를 파악하고(querySelector이용), getAttribute('component이름', 'property 이름')을 이용--> 코드 결과 : html에 scene에 설정된 maxtrack값 가져옴
