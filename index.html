@@ -6,10 +6,7 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
 	  
-	
-        <input type='text' id='input_num'/>
-	<input type='button' id='btn_num' value='확인'/>
-	<input type='button' id='toggle' value='on' style="position:fixed; right:10px; top:0px;"/>
+
 
         <script>
 		const num = document.getElementById('input_num');
@@ -56,7 +53,9 @@
   </head>
 
   <body>
-   
+	  <input type='text' id='input_num'/>
+	  <input type='button' id='btn_num' value='확인'/>
+	  <input type='button' id='toggle' value='on' style="position:fixed; right:10px; top:0px;"/>
     
     <a-scene id="scene" mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/char.mind; maxTrack: 5; autoStart: true;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
