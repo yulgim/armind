@@ -8,14 +8,14 @@
 	  
 
 
-        <script>
+        <script type='module' src='./goto.js'>
 		const num = document.getElementById('input_num');
 		const btn = document.getElementById('btn_num');
 		const tog = document.getElementById('toggle');
 		var user_num;
 		
 		btn.addEventListener('click', function() {
-			user_num = Number(num.value);
+			export user_num = Number(num.value);
 		});
 		
 		tog.addEventListener('click', function() {
@@ -30,7 +30,6 @@
 			}
 		});
 		
-		export {user_num};
 		
         </script>
 	
