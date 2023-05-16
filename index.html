@@ -8,30 +8,7 @@
 	  
 
 
-        <script>
-		const num = document.getElementById('input_num');
-		const btn = document.getElementById('btn_num');
-		const tog = document.getElementById('toggle');
-		var user_num;
-		
-		btn.addEventListener('click', function() {
-			//export user_num = Number(num.value);
-		});
-		
-		tog.addEventListener('click', function() {
-			if(btn.style.display !== 'none' && num.style.display !== 'none') { // 입력창과 '확인' 버튼 보일 때, 'on' 버튼 누르면 입력창과  '확인' 버튼 사라짐
-				btn.style.display = 'none';
-				num.style.display = 'none'; 
-				toggle.value = 'off';
-			} else if(btn.style.display == 'none' && num.style.display == 'none') {
-				btn.style.display = 'block';
-				num.style.display = 'block';
-				toggle.value = 'on';
-			}
-		});
-		
-		
-        </script>
+       
 	
 
     
@@ -84,5 +61,31 @@
       </a-entity>
       
     </a-scene>
+	  
+	  
+	  
+	  <script>
+		  const num = document.getElementById('input_num');
+		  const btn = document.getElementById('btn_num');
+		  const tog = document.getElementById('toggle');
+		  var user_num;
+		  btn.addEventListener('click', function() {
+			//export user_num = Number(num.value);
+		  });
+		
+		  tog.addEventListener('click', function() {
+			  if(btn.style.display !== 'none' && num.style.display !== 'none') { // 입력창과 '확인' 버튼 보일 때, 'on' 버튼 누르면 입력창과  '확인' 버튼 사라짐
+				  btn.style.display = 'none';
+				  num.style.display = 'none'; 
+				  toggle.value = 'off';
+			  } else if(btn.style.display == 'none' && num.style.display == 'none') {
+				  btn.style.display = 'block';
+				  num.style.display = 'block';
+				  toggle.value = 'on';
+			  }
+		  });
+		
+		
+	  </script>
   </body>
 </html>
