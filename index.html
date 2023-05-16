@@ -8,9 +8,6 @@
 	  
 
 
-
-	  
-
 	  <script>
 		  document.addEventListener("DOMContentLoaded", function() {
 			  const num = document.querySelector('#input_num');
@@ -37,25 +34,11 @@
 				  
 		  });
 
-		 
 
 		
 	  </script>
 
-	  <!--addEventListener()는 특정 이벤트가 발생할 때마다 특정 함수를 실행함
-    <script>
-	    document.addEventListener("DOMContentLoaded", function() {
-		    const sceneEl = document.querySelector('a-scene');
-		    const arSystem = sceneEl.systems["mindar-image-system"];
-		    const startButton = document.querySelector("#startbtn");
-		    
-		    //startButton 클릭 시 ar 시작, a-scene에 autoStart 값 false로 바꾸기
-		    startButton.addEventListener('click', () => {
-			    console.log("start");
-			    arSystem.start(); // start AR
-		    });
-	    });
-  </script>-->
+
   </head>
 
   <body>
@@ -63,34 +46,31 @@
 	  <input type='text' id='input_num' />
 	  <button id='btn_num'>확인</button>
 	  <button id='toggle' style="position:fixed; right:10px; top:0px;">on</button>
-	  
+	  <a-scene id="scene" mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/char.mind; maxTrack: 5; autoStart: true;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+		  <a-assets>
+			  <img id="up" src="./content/up.png" />
+			  <img id="down" src="./content/down.png" />
+			  <img id="arrive" src="./content/arrive.png" />
+		  </a-assets>
 
-    <a-scene id="scene" mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/char.mind; maxTrack: 5; autoStart: true;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <a-assets>
-        <img id="up" src="./content/up.png" />
-        <img id="down" src="./content/down.png" />
-        <img id="arrive" src="./content/arrive.png" />
-      </a-assets>
+		  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-image id="arrow1" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
-      </a-entity>
-      <a-entity mindar-image-target="targetIndex: 1">
-        <a-image id="arrow2" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
-      </a-entity>
-       <a-entity mindar-image-target="targetIndex: 2">
-        <a-image id="arrow3" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
-      </a-entity>
-      <a-entity mindar-image-target="targetIndex: 3">
-        <a-image id="arrow4" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
-      </a-entity>
-      <a-entity mindar-image-target="targetIndex: 4">
-        <a-image id="arrow5" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
-      </a-entity>
-      
-    </a-scene>
+		  <a-entity mindar-image-target="targetIndex: 0">
+			  <a-image id="arrow1" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+		  </a-entity>
+		  <a-entity mindar-image-target="targetIndex: 1">
+			  <a-image id="arrow2" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+		  </a-entity>
+		  <a-entity mindar-image-target="targetIndex: 2">
+			  <a-image id="arrow3" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+		  </a-entity>
+		  <a-entity mindar-image-target="targetIndex: 3">
+			  <a-image id="arrow4" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+		  </a-entity>
+		  <a-entity mindar-image-target="targetIndex: 4">
+			  <a-image id="arrow5" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+		  </a-entity>
+	  </a-scene>
 
 
   </body>
