@@ -7,10 +7,33 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
 	  
 
-
-       
+	  <input type='text' id='input_num'/>
+	  <button id='btn_num'>확인</button>
+	  <button id='toggle' style="position:fixed; right:10px; top:0px;">on</button>
 	
-
+	  <script>
+		  const num = document.getElementById('input_num');
+		  const btn = document.getElementById('btn_num');
+		  const tog = document.getElementById('toggle');
+		  var user_num;
+		  btn.addEventListener('click', function() {
+			//export user_num = Number(num.value);
+		  });
+		
+		  tog.addEventListener('click', function() {
+			  if(btn.style.display !== 'none' && num.style.display !== 'none') { // 입력창과 '확인' 버튼 보일 때, 'on' 버튼 누르면 입력창과  '확인' 버튼 사라짐
+				  btn.style.display = 'none';
+				  num.style.display = 'none'; 
+				  toggle.value = 'off';
+			  } else if(btn.style.display == 'none' && num.style.display == 'none') {
+				  btn.style.display = 'block';
+				  num.style.display = 'block';
+				  toggle.value = 'on';
+			  }
+		  });
+		
+		
+	  </script>
     
 	  <!--addEventListener()는 특정 이벤트가 발생할 때마다 특정 함수를 실행함
     <script>
@@ -29,9 +52,7 @@
   </head>
 
   <body>
-	  <input type='text' id='input_num'/>
-	  <button id='btn_num'>확인</button>
-	  <button id='toggle' style="position:fixed; right:10px; top:0px;">on</button>
+	  
 	  
 	  
     
@@ -64,28 +85,6 @@
 	  
 	  
 	  
-	  <script>
-		  const num = document.getElementById('input_num');
-		  const btn = document.getElementById('btn_num');
-		  const tog = document.getElementById('toggle');
-		  var user_num;
-		  btn.addEventListener('click', function() {
-			//export user_num = Number(num.value);
-		  });
-		
-		  tog.addEventListener('click', function() {
-			  if(btn.style.display !== 'none' && num.style.display !== 'none') { // 입력창과 '확인' 버튼 보일 때, 'on' 버튼 누르면 입력창과  '확인' 버튼 사라짐
-				  btn.style.display = 'none';
-				  num.style.display = 'none'; 
-				  toggle.value = 'off';
-			  } else if(btn.style.display == 'none' && num.style.display == 'none') {
-				  btn.style.display = 'block';
-				  num.style.display = 'block';
-				  toggle.value = 'on';
-			  }
-		  });
-		
-		
-	  </script>
+	  
   </body>
 </html>
