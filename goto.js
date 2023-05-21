@@ -2,9 +2,9 @@
 
 window.onload = function(){
   function saveNum(){
-    const num = document.querySelector('#input_num');
+    const input = document.querySelector('#input_num');
     var user_num=0;
-    user_num = num.value;
+    user_num = input.value;
     
     console.log('save');
   }
