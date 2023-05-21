@@ -9,45 +9,16 @@
 	  
 
 
-	  <script>
-		  // 입력창과 입력 버튼의 보이기를 on/off 하는 기능
-		  document.addEventListener("DOMContentLoaded", function() {
-			  const num = document.querySelector('#input_num');
-			  const btn = document.querySelector('#btn_num');
-			  const tog = document.querySelector('#toggle');
-
-			  
-			  tog.addEventListener('click', function() {
-				  if(btn.style.display !== 'none' && num.style.display !== 'none') { // 입력창과 '확인' 버튼 보일 때, 'on' 버튼 누르면 입력창과  '확인' 버튼 사라짐
-					  btn.style.display = 'none';
-					  num.style.display = 'none'; 
-					  toggle.innerText = 'off';
-					  console.log('input_off');
-				  } else if(btn.style.display == 'none' && num.style.display == 'none') {
-					  btn.style.display = 'block';
-					  num.style.display = 'block';
-					  toggle.innerText = 'on';
-					  console.log('input_on');
-				  }
-				  
-			  });
-				  
-		  });
-
-
-		
-	  </script>
-
 
   </head>
 
   <body>
 	  <div style="position: absolute; z-index: 1000">				<!-- 출력되는 영상보다 훨씬 앞에 있어야 입력창과 버튼이 동작 가능-->
 		  <input type='number' id='input_num' min='1' max='5' step='1' />
-		  <button id='btn_num'>확인</button>
-		  <button id='toggle' style="position:fixed; right:10px; top:0px;">on</button>
+		  <button id='input_btn'>확인</button>
+		  <button id='ar_start_btn' style="position:fixed; right:10px; top:0px;">now_stop</button>
 	  </div>
-	  <a-scene id="scene" mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/char.mind; maxTrack: 5; autoStart: true;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+	  <a-scene id="scene" mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/char.mind; maxTrack: 5; autoStart: false;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
 		  <a-assets>
 			  <img id="up" src="./content/up.png" />
 			  <img id="down" src="./content/down.png" />
@@ -57,19 +28,19 @@
 		  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
 		  <a-entity mindar-image-target="targetIndex: 0">
-			  <a-image id="arrow1" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+			  <a-image id="arrow0" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
 		  </a-entity>
 		  <a-entity mindar-image-target="targetIndex: 1">
-			  <a-image id="arrow2" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+			  <a-image id="arrow1" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
 		  </a-entity>
 		  <a-entity mindar-image-target="targetIndex: 2">
-			  <a-image id="arrow3" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+			  <a-image id="arrow2" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
 		  </a-entity>
 		  <a-entity mindar-image-target="targetIndex: 3">
-			  <a-image id="arrow4" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+			  <a-image id="arrow3" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
 		  </a-entity>
 		  <a-entity mindar-image-target="targetIndex: 4">
-			  <a-image id="arrow5" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+			  <a-image id="arrow4" src="" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
 		  </a-entity>
 	  </a-scene>
 
