@@ -5,7 +5,7 @@ window.onload = function(){
     const input = document.querySelector('#input_num');
     var user_num=0;
     user_num = input.value;
-    
+    console.log(typeof user_num);
     console.log('save');
   }
 }
