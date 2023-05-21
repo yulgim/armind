@@ -42,8 +42,8 @@
 
   <body>
 	  <div style="position: absolute; z-index: 1000">				<!-- 출력되는 영상보다 훨씬 앞에 있어야 입력창과 버튼이 동작 가능-->
-		  <input type='text' id='input_num' />
-		  <button id='btn_num'>확인</button>
+		  <input type='number' id='input_num' min='1' max='5' step='1' />
+		  <button id='btn_num' onclick='saveNum()'>확인</button>
 		  <button id='toggle' style="position:fixed; right:10px; top:0px;">on</button>
 	  </div>
 	  <a-scene id="scene" mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/char.mind; maxTrack: 5; autoStart: true;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
