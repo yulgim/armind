@@ -1,15 +1,15 @@
-
-
-window.onload = function(){
-  function saveNum(){
-    const input = document.querySelector('#input_num');
-    var user_num=0;
+window.addEventListener('DOMContentLoaded', function(){
+  const input = document.querySelector('#input_num');
+  const check = document.querySelector('#btn_num');
+  var user_num=0;
+  
+  check.addEventListener('click', function() {
     user_num = input.value;
     console.log(typeof user_num);
     console.log('save');
-  }
-}
-
+  });
+  
+});
 
 
 
