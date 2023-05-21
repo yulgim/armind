@@ -2,7 +2,7 @@
 
 window.addEventListener('DOMContentLoaded', function(){
   const sceneEl = document.querySelector('a-scene');
-	const arSystem = sceneEl.systems["mindar-image-system"]; //출처 : https://hiukim.github.io/mind-ar-js-doc/examples/events-handling
+  const arSystem = sceneEl.systems["mindar-image-system"]; //출처 : https://hiukim.github.io/mind-ar-js-doc/examples/events-handling
   const start = document.querySelector("#ar_start_btn");
   
   const scene = document.querySelector(#scene);  //아래 코드는 entity의 id를 이용해 entity를 파악하고(querySelector이용), getAttribute('component이름', 'property 이름')을 이용--> 코드 결과 : html에 scene에 설정된 maxtrack값 가져옴
