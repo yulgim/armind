@@ -9,26 +9,24 @@
 
 
 	  <script>
+		  // 입력창과 입력 버튼의 보이기를 on/off 하는 기능
 		  document.addEventListener("DOMContentLoaded", function() {
 			  const num = document.querySelector('#input_num');
 			  const btn = document.querySelector('#btn_num');
 			  const tog = document.querySelector('#toggle');
-			  var user_num=0;
-			  
-			  btn.addEventListener('click', function() {
-				  user_num = Number(num.value);
-				  console.log('save');
-			  });
+
 			  
 			  tog.addEventListener('click', function() {
 				  if(btn.style.display !== 'none' && num.style.display !== 'none') { // 입력창과 '확인' 버튼 보일 때, 'on' 버튼 누르면 입력창과  '확인' 버튼 사라짐
 					  btn.style.display = 'none';
 					  num.style.display = 'none'; 
 					  toggle.innerText = 'off';
+					  console.log('input_off');
 				  } else if(btn.style.display == 'none' && num.style.display == 'none') {
 					  btn.style.display = 'block';
 					  num.style.display = 'block';
 					  toggle.innerText = 'on';
+					  console.log('input_on');
 				  }
 				  
 			  });
