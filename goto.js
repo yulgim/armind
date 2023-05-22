@@ -28,11 +28,11 @@ window.addEventListener('DOMContentLoaded', function(){
         
     var arwimg = [];// 사용자의 열 값에 따른 화살표 방향 설정, '설정한 규칙 : 좌석이 뒤로 갈수록 열의 수가 증가함'
     for (let i = 1; i < user_num; i++){
-      arwimg.push('./content/up.png'); // 사용자 열보다 앞에 있는 이미지 타겟에는 위를 향하는 화살표 표시
+      arwimg.push('#up'); // 사용자 열보다 앞에 있는 이미지 타겟에는 위를 향하는 화살표 표시
     }
-    arwimg.push('./content/arrive.png'); // 사용자 열에 있는 이미지 타겟에는 도착 아이콘 표시
+    arwimg.push('#arrive'); // 사용자 열에 있는 이미지 타겟에는 도착 아이콘 표시
     for (let i = user_num+1; i <= imgmax; i++){
-      arwimg.push('./content/down.png'); //사용자 열보다 뒤에 있는 이미지 타겟에는 아래를 향하는 화살표 표시
+      arwimg.push('#down'); //사용자 열보다 뒤에 있는 이미지 타겟에는 아래를 향하는 화살표 표시
     }
     console.log(arwimg);
     
