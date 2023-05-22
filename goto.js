@@ -1,12 +1,12 @@
 
 
 window.addEventListener('DOMContentLoaded', function(){
-  const sceneEl = document.querySelector("a-scene");
+  const sceneEl = document.querySelector("a-scene"); //entity의 class를 이용해 entity를 파악하고(querySelector이용)
   const arSystem = sceneEl.systems["mindar-image-system"]; //출처 : https://hiukim.github.io/mind-ar-js-doc/examples/events-handling
   const start = document.querySelector("#ar_start_btn");
   
-  const scene = document.getElementById("scene1");  //아래 코드는 entity의 id를 이용해 entity를 파악하고(querySelector이용), getAttribute('component이름', 'property 이름')을 이용--> 코드 결과 : html에 scene에 설정된 maxtrack값 가져옴
-  const imgmax = scene.getAttribute('mindar-image','maxTrack'); // html에서 설정한 maxtrack값을 가져옴
+    //아래 코드는 getAttribute('component이름', 'property 이름')을 이용--> 코드 결과 : html에 scene에 설정된 maxtrack값 가져옴
+  const imgmax = sceneEl.getAttribute('mindar-image','maxTrack'); // html에서 설정한 maxtrack값을 가져옴
   console.log(imgmax);
 	
   let arwid = [];//ar 오브젝트의 id
