@@ -7,6 +7,43 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
     <!--<script src="https://raw.githack.com/yulgim/armind/main/goto.js"></script>-->
 	  
+
+
+
+  </head>
+
+  <body>
+	  <div style="position: absolute; z-index: 1000">				<!-- 출력되는 영상보다 훨씬 앞에 있어야 입력창과 버튼이 동작 가능-->
+		  <input type='number' id='input_num' min='1' max='5' step='1' />
+		  <button id='input_btn'>확인</button>
+		  <button id='ar_start_btn' style="position:fixed; right:10px; top:0px;">now_stop</button>
+	  </div>
+	  <a-scene mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/char.mind; autoStart: true; maxTrack: 5" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+		  <a-assets>
+			  <img id="up" src="https://raw.githack.com/yulgim/armind/main/content/up.png" crossorigin="anonymous" />
+			  <img id="down" src="https://raw.githack.com/yulgim/armind/main/content/down.png" crossorigin="anonymous" />
+			  <img id="arrive" src="https://raw.githack.com/yulgim/armind/main/content/arrive.png" crossorigin="anonymous" />
+		  </a-assets>
+
+		  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+		  <a-entity mindar-image-target="targetIndex: 0">
+			  <a-image id="arrow0" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+		  </a-entity>
+		  <a-entity mindar-image-target="targetIndex: 1">
+			  <a-image id="arrow1" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+		  </a-entity>
+		  <a-entity mindar-image-target="targetIndex: 2">
+			  <a-image id="arrow2" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+		  </a-entity>
+		  <a-entity mindar-image-target="targetIndex: 3">
+			  <a-image id="arrow3" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+		  </a-entity>
+		  <a-entity mindar-image-target="targetIndex: 4">
+			  <a-image id="arrow4" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
+		  </a-entity>
+	  </a-scene>
+
     <script>
 	    window.addEventListener('DOMContentLoaded', function(){
   		const sceneEl = document.querySelector("a-scene"); //entity의 class를 이용해 entity를 파악하고(querySelector이용)
@@ -53,42 +90,5 @@
 		});
 	    });
     </script>
-
-
-  </head>
-
-  <body>
-	  <div style="position: absolute; z-index: 1000">				<!-- 출력되는 영상보다 훨씬 앞에 있어야 입력창과 버튼이 동작 가능-->
-		  <input type='number' id='input_num' min='1' max='5' step='1' />
-		  <button id='input_btn'>확인</button>
-		  <button id='ar_start_btn' style="position:fixed; right:10px; top:0px;">now_stop</button>
-	  </div>
-	  <a-scene mindar-image="imageTargetSrc: https://raw.githack.com/yulgim/armind/main/image/char.mind; autoStart: true; maxTrack: 5" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-		  <a-assets>
-			  <img id="up" src="https://raw.githack.com/yulgim/armind/main/content/up.png" crossorigin="anonymous" />
-			  <img id="down" src="https://raw.githack.com/yulgim/armind/main/content/down.png" crossorigin="anonymous" />
-			  <img id="arrive" src="https://raw.githack.com/yulgim/armind/main/content/arrive.png" crossorigin="anonymous" />
-		  </a-assets>
-
-		  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-
-		  <a-entity mindar-image-target="targetIndex: 0">
-			  <a-image id="arrow0" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
-		  </a-entity>
-		  <a-entity mindar-image-target="targetIndex: 1">
-			  <a-image id="arrow1" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
-		  </a-entity>
-		  <a-entity mindar-image-target="targetIndex: 2">
-			  <a-image id="arrow2" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
-		  </a-entity>
-		  <a-entity mindar-image-target="targetIndex: 3">
-			  <a-image id="arrow3" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
-		  </a-entity>
-		  <a-entity mindar-image-target="targetIndex: 4">
-			  <a-image id="arrow4" src="#up" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="black"></a-image>
-		  </a-entity>
-	  </a-scene>
-
-
   </body>
 </html>
