@@ -5,9 +5,7 @@ window.addEventListener('DOMContentLoaded', function(){
   const arSystem = sceneEl.systems["mindar-image-system"]; //출처 : https://hiukim.github.io/mind-ar-js-doc/examples/events-handling
   const start = document.querySelector("#ar_start_btn");
   
-    //아래 코드는 getAttribute('component이름', 'property 이름')을 이용--> 코드 결과 : html에 scene에 설정된 maxtrack값 가져옴
-  const imgmax = document.querySelector("a-scene").getAttribute('mindar-image').maxTrack;
-  console.log(imgmax);
+  const imgmax = 5;
 	
   let arwid = [];//ar 오브젝트의 id
   const arw = 'arrow';
