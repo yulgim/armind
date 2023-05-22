@@ -37,12 +37,17 @@ window.addEventListener('DOMContentLoaded', function(){
     console.log(arwimg);
     
 	  
-    var imageEntity = "";
+    var imageEntity = document.querySelector(arwid[0]);
+    console.log(imageEntity.getAttribute('src'));
+    imageEntity.setAttribute('src', '#arrive');
+    console.log(imageEntity.getAttribute('src'));
+	  /*
     for (let i = 0; i < imgmax; i++){
       imageEntity = document.querySelector(arwid[i]);
       imageEntity.setAttribute("src", arwimg[i]);
     }
-    console.log('imgsrc');
+    console.log('imgsrc');*/
+	  
   });
   
   
