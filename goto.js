@@ -38,7 +38,8 @@ window.addEventListener('DOMContentLoaded', function(){
     
     for (let i = 0; i < imgmax; i++){
       let imageEntity = document.querySelector(arwid[i]);
-      imageEntity.setAttribute('src', arwimg[i]);
+      imageEntity.setAttribute("src", arwimg[i]);
+      console.log(imageEntity.getAttribute('src'));
     }
     console.log('imgsrc');
   });
