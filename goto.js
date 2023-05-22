@@ -36,10 +36,11 @@ window.addEventListener('DOMContentLoaded', function(){
     }
     console.log(arwimg);
     
+	  
+    var imageEntity = "";
     for (let i = 0; i < imgmax; i++){
-      let imageEntity = document.querySelector(arwid[i]);
+      imageEntity = document.querySelector(arwid[i]);
       imageEntity.setAttribute("src", arwimg[i]);
-      console.log(imageEntity.getAttribute('src'));
     }
     console.log('imgsrc');
   });
