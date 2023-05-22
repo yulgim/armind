@@ -50,6 +50,24 @@
     		}
     		console.log('imgsrc');
   		});
+		
+		
+		
+		start.addEventListener('click', function() {
+			if(check.style.display !== 'none' && num.style.display !== 'none') { // 입력창과 '확인' 버튼 보일 때, 'on' 버튼 누르면 입력창과  '확인' 버튼 사라며 ar 시작
+				check.style.display = 'none';
+				num.style.display = 'none'; 
+				start.innerText = 'now_strat';
+				arSystem.start(); // ar 시작
+				console.log('start');
+			} else if(check.style.display == 'none' && num.style.display == 'none') {
+				check.style.display = 'block';
+				num.style.display = 'block';
+				start.innerText = 'now_stop'
+				arSystem.stop(); // ar 시작
+				console.log('stop');
+			}
+		});
 	});
 			
 	</script>
