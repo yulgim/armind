@@ -7,7 +7,51 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
     <script src="https://raw.githack.com/yulgim/armind/main/goto.js"></script>
 	  
+	<script>
+	window.addEventListener('DOMContentLoaded', function(){
+  		const sceneEl = document.querySelector("a-scene"); //entity의 class를 이용해 entity를 파악하고(querySelector이용)
+  		const arSystem = sceneEl.systems["mindar-image-system"]; //출처 : https://hiukim.github.io/mind-ar-js-doc/examples/events-handling
+  		const start = document.querySelector("#ar_start_btn");
+  
+  		const imgmax = 5;
+	
+  		let arwid = [];//ar 오브젝트의 id
+  		const arw = 'arrow';
+  		for(let i = 0; i < imgmax; i++){
+    		arwid.push(arw + i);
+  		}
+  		console.log(arwid);
+  
+  		const num = document.querySelector('#input_num');
+  		const check = document.querySelector('#input_btn');
+  		let user_num=0;
+  
+  
 
+  		check.addEventListener('click', function() {
+    		user_num = Number(num.value);
+    		console.log(typeof user_num);
+    		console.log(user_num);
+        
+    		var arwimg = [];// 사용자의 열 값에 따른 화살표 방향 설정, '설정한 규칙 : 좌석이 뒤로 갈수록 열의 수가 증가함'
+    		for (let i = 1; i < user_num; i++){
+      		arwimg.push('#up'); // 사용자 열보다 앞에 있는 이미지 타겟에는 위를 향하는 화살표 표시
+    		}
+    		arwimg.push('#arrive'); // 사용자 열에 있는 이미지 타겟에는 도착 아이콘 표시
+    		for (let i = user_num+1; i <= imgmax; i++){
+      		arwimg.push('#down'); //사용자 열보다 뒤에 있는 이미지 타겟에는 아래를 향하는 화살표 표시
+    		}
+    		console.log(arwimg);
+    
+	  
+    		var imageEntity = document.getElementById(arwid[0]);
+    		console.log(imageEntity.getAttribute('src'));
+    		imageEntity.setAttribute('src', '#arrive');
+    		console.log(imageEntity.getAttribute('src'));
+  		});
+	});
+			
+	</script>
 
   </head>
 
