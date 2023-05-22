@@ -40,12 +40,11 @@ window.addEventListener('DOMContentLoaded', function(){
     console.log(imageEntity.getAttribute('src'));
     imageEntity.setAttribute('src', '#arrive');
     console.log(imageEntity.getAttribute('src'));
-	  /*
     for (let i = 0; i < imgmax; i++){
-      imageEntity = document.querySelector(arwid[i]);
-      imageEntity.setAttribute("src", arwimg[i]);
+	    let imageEntity = document.querySelector(arwid[i]);
+	    imageEntity.setAttribute("src", arwimg[i]);
     }
-    console.log('imgsrc');*/
+    console.log('imgsrc');
 	  
   });
   
