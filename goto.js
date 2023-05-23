@@ -8,8 +8,10 @@ window.addEventListener('DOMContentLoaded', function(){
   const mind = sceneEl.getAttribute('mindar-image');
   const index = mind.indexOf('maxTrack');
   console.log(index);
-  const imgmax = mind[index+10];
+  const str = mind.slice(index, mind.length);
+  const imgmax = Number(str.match(/[0-9]+/g));
   console.log(imgmax);
+  console.log(typeof(imgmax));
 	
   let arwid = [];//ar 오브젝트의 id
   const arw = '#arrow';
