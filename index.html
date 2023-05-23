@@ -5,24 +5,9 @@
     <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
-    <!--<script src="https://raw.githack.com/yulgim/armind/main/goto.js"></script>-->
+    <script src="https://raw.githack.com/yulgim/armind/main/goto.js"></script>
 	  
-	  <script>
-		window.addEventListener('DOMContentLoaded', function(){
-		  const sceneEl = document.querySelector("a-scene"); //entity의 class를 이용해 entity를 파악하고(querySelector이용) //출처 : https://hiukim.github.io/mind-ar-js-doc/examples/events-handling
-		  const mind = sceneEl.getAttribute('mindar-image');
-		  console.log(mind);
 
-
-		  const index = mind.indexOf('maxTrack');
-		  console.log(index);
-		  const str = mind.slice(index, mind.length);
-		  console.log(str);
-		  const imgmax = Number(str.match(/[0-9]+/g));
-		  console.log(imgmax);
-		  console.log(typeof(imgmax));
-		});
-	  </script>
 	  
 	
 	  <!--
