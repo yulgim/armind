@@ -13,7 +13,7 @@
 		  const mind = sceneEl.getAttribute('mindar-image');
 		  const index = mind.indexOf('maxTrack');
 		  console.log(index);
-		  const str = mind.slice(index,-1);
+		  const str = mind.slice(index, str.length - 1);
 		  console.log(str);
 		  const imgmax = str.match(/0-9+/g);
 		  console.log(imgmax);
