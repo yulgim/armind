@@ -11,7 +11,8 @@
 		  window.addEventListener('DOMContentLoaded', function(){
 			  const sceneEl = document.querySelector("a-scene");
 			  const mind = sceneEl.getDOMAttribute('mindar-image');
-			  const imgmax = mind.maxTrack;
+			  let imgmax = mind.maxTrack;
+			  console.log(mind.maxTrack);
 			  console.log(imgmax);
 		  });
 	  </script>
