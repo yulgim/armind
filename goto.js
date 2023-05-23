@@ -5,7 +5,11 @@ window.addEventListener('DOMContentLoaded', function(){
   const arSystem = sceneEl.systems["mindar-image-system"]; //출처 : https://hiukim.github.io/mind-ar-js-doc/examples/events-handling
   const start = document.querySelector("#ar_start_btn");
   
-  const imgmax = 5;
+  const mind = sceneEl.getAttribute('mindar-image');
+  const index = mind.indexOf('maxTrack');
+  console.log(index);
+  const imgmax = mind[index+10];
+  console.log(imgmax);
 	
   let arwid = [];//ar 오브젝트의 id
   const arw = '#arrow';
