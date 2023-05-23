@@ -8,6 +8,7 @@
     <!--<script src="https://raw.githack.com/yulgim/armind/main/goto.js"></script>-->
 	  
 	  <script>
+		window.addEventListener('DOMContentLoaded', function(){
 		  const sceneEl = document.querySelector("a-scene"); //entity의 class를 이용해 entity를 파악하고(querySelector이용) //출처 : https://hiukim.github.io/mind-ar-js-doc/examples/events-handling
 		  const mind = sceneEl.getAttribute('mindar-image');
 		  const index = mind.indexOf('maxTrack');
@@ -16,7 +17,7 @@
 		  console.log(str);
 		  const imgmax = str.match(/0-9+/g);
 		  console.log(imgmax);
-
+		});
 	  </script>
 	  
 	
