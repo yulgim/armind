@@ -10,13 +10,16 @@
 	  <script>
 		window.addEventListener('DOMContentLoaded', function(){
 		  const sceneEl = document.querySelector("a-scene"); //entity의 class를 이용해 entity를 파악하고(querySelector이용) //출처 : https://hiukim.github.io/mind-ar-js-doc/examples/events-handling
-		  const mind = sceneEl.getAttribute('mindar-image');
+		  const mind = sceneEl.getDOMAttribute('mindar-image');
+		  console.log(mind);
+		  console.log(mind['maxTrack']);
+			/*
 		  const index = mind.indexOf('maxTrack');
 		  console.log(index);
 		  const str = mind.slice(index, mind.length);
 		  console.log(str);
 		  const imgmax = str.match(/0-9+/g);
-		  console.log(imgmax);
+		  console.log(imgmax);*/
 		});
 	  </script>
 	  
